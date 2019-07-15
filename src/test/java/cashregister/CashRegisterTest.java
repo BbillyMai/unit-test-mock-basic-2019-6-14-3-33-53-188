@@ -53,7 +53,12 @@ public class CashRegisterTest {
     @Test
     public void should_verify_with_process_call_with_mockito() {
 
+        CashRegister cashRegister = mock(CashRegister.class);
+        Purchase purchase = mock(Purchase.class);
 
+        cashRegister.process(purchase);
+
+        verify(cashRegister).process(purchase)
     }
 
 }
